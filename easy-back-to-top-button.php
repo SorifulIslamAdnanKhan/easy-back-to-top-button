@@ -37,8 +37,129 @@ function ebttb_enqueue_scripts(){
 add_action("wp_enqueue_scripts", "ebttb_enqueue_scripts");
 
 // Add Back To Top Button
+
 function ebttb_add_button() {
   echo '<button id="backToTop" title="Back to Top"><i class="fas fa-chevron-up"></i></button>';
 }
 add_action('wp_footer', 'ebttb_add_button');
+
+
+// Plugin Customization Settings
+
+add_action("customize_register", 'ebttb_customization');
+
+function ebttb_customization ($wp_customize){
+  $wp_customize->add_section('ebttb_top_section', array(
+    'title' =>__('Easy Back To Top Button','ebttb'),
+    'description' => 'It is a handy tool to add an easy back to top button in your website.'
+  ));
+
+  // Change Button Background Color
+
+  $wp_customize->add_setting('ebttb_default_bg_color', array(
+    'default' => '#007bff',
+    'sanitize_callback' => 'sanitize_text_field',
+  ));
+
+  $wp_customize->add_control (new WP_Customize_Color_Control ($wp_customize,'ebttb_default_bg_color', array(
+    'label' => 'Background Color',
+    'description' => 'You can change the button background color.',
+    'section' => 'ebttb_top_section',
+    'type' => 'color',
+  )));
+
+  // Change Button Border Radius
+
+  $wp_customize->add_setting('ebttb_border_radius', array(
+    'default' => '50%',
+    'sanitize_callback' => 'sanitize_text_field',
+  ));
+
+  $wp_customize->add_control('ebttb_border_radius', array(
+    'label'       => 'Border Radius',
+    'description' => 'You can change the border radius of the button using both percentage and pixel.',
+    'section'     => 'ebttb_top_section',
+    'type'        => 'text',
+));
+
+  // Change Button Width
+
+  $wp_customize->add_setting('ebttb_width', array(
+    'default' => '50px',
+    'sanitize_callback' => 'sanitize_text_field',
+  ));
+
+  $wp_customize->add_control('ebttb_width', array(
+    'label'       => 'Width',
+    'description' => 'You can change the button width.',
+    'section'     => 'ebttb_top_section',
+    'type'        => 'text',
+));
+
+  // Change Button Height
+
+  $wp_customize->add_setting('ebttb_height', array(
+    'default'           => '50px',
+    'sanitize_callback' => 'sanitize_text_field',
+  ));
+
+  $wp_customize->add_control('ebttb_height', array(
+      'label'       => 'Height',
+      'description' => 'You can change the button height.',
+      'section'     => 'ebttb_top_section',
+      'type'        => 'text',
+  ));
+
+  // Change Icon Size
+
+  $wp_customize->add_setting('ebttb_icon_size', array(
+    'default'           => '20px',
+    'sanitize_callback' => 'sanitize_text_field',
+  ));
+
+  $wp_customize->add_control('ebttb_icon_size', array(
+      'label'       => 'Icon Size',
+      'description' => 'You can change the icon size.',
+      'section'     => 'ebttb_top_section',
+      'type'        => 'text',
+  ));
+
+  // Change Icon Color
+
+  $wp_customize->add_setting('ebttb_icon_color', array(
+    'default' => '#ffffff',
+  ));
+
+  $wp_customize->add_control (new WP_Customize_Color_Control ($wp_customize,'ebttb_icon_color', array(
+    'label' => 'Icon Color',
+    'description' => 'You can change the icon color.',
+    'section' => 'ebttb_top_section',
+    'type' => 'color',
+  )));
+}
+
+// Plugin CSS Customization
+
+function ebttb_bg_color_customization (){
+  ?>
+  <style>
+    #backToTop {
+      width: <?php print get_theme_mod('ebttb_width')?>;
+      height: <?php print get_theme_mod('ebttb_height')?>;
+      color: <?php print get_theme_mod('ebttb_icon_color')?>;
+      background-color: <?php print get_theme_mod('ebttb_default_bg_color')?>;
+      border-radius: <?php print get_theme_mod('ebttb_border_radius')?>;
+    }
+    #backToTop i {
+    font-size: <?php print get_theme_mod('ebttb_icon_size')?>;;
+    }
+  </style>
+  
+  
+  <?php
+}
+
+add_action('wp_head','ebttb_bg_color_customization')
+
+
 ?>
