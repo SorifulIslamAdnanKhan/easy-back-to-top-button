@@ -11,7 +11,7 @@
  * Author URI:        https://sorinx.com/
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       ebttb
+ * Text Domain:       easy-back-to-top-button
  */
 
  // Exit If Accessed Directly.
@@ -49,7 +49,7 @@ add_action("wp_enqueue_scripts", "ebttb_enqueue_scripts");
 
 function ebttb_add_button() {
   ?>
-  <button id="backToTop" title="<?php esc_attr_e( 'Back to Top', 'ebttb' ); ?>">
+  <button id="backToTop" title="<?php esc_attr_e( 'Back to Top', 'easy-back-to-top-button' ); ?>">
       <i class="fas fa-chevron-up"></i>
   </button>
   <?php
@@ -63,8 +63,8 @@ add_action( 'wp_footer', 'ebttb_add_button' );
 add_action( 'customize_register', 'ebttb_customizer_settings' );
 function ebttb_customizer_settings( $wp_customize ) {
     $wp_customize->add_section( 'ebttb_top_section', array(
-        'title'       => __( 'Easy Back To Top Button', 'ebttb' ),
-        'description' => __( 'Customize the back-to-top button appearance.', 'ebttb' ),
+        'title'       => __( 'Easy Back To Top Button', 'easy-back-to-top-button' ),
+        'description' => __( 'Customize the back-to-top button appearance.', 'easy-back-to-top-button' ),
     ) );
 
     // Background Color.
@@ -74,7 +74,7 @@ function ebttb_customizer_settings( $wp_customize ) {
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ebttb_default_bg_color', array(
-        'label'   => __( 'Background Color', 'ebttb' ),
+        'label'   => __( 'Background Color', 'easy-back-to-top-button' ),
         'section' => 'ebttb_top_section',
     ) ) );
 
@@ -85,7 +85,7 @@ function ebttb_customizer_settings( $wp_customize ) {
         'sanitize_callback' => 'ebttb_sanitize_dimension',
     ) );
     $wp_customize->add_control( 'ebttb_border_radius', array(
-        'label'       => __( 'Border Radius', 'ebttb' ),
+        'label'       => __( 'Border Radius', 'easy-back-to-top-button' ),
         'section'     => 'ebttb_top_section',
         'type'        => 'text',
     ) );
@@ -97,7 +97,7 @@ function ebttb_customizer_settings( $wp_customize ) {
         'sanitize_callback' => 'ebttb_sanitize_dimension',
     ) );
     $wp_customize->add_control( 'ebttb_width', array(
-        'label'       => __( 'Width', 'ebttb' ),
+        'label'       => __( 'Width', 'easy-back-to-top-button' ),
         'section'     => 'ebttb_top_section',
         'type'        => 'text',
     ) );
@@ -109,7 +109,7 @@ function ebttb_customizer_settings( $wp_customize ) {
         'sanitize_callback' => 'ebttb_sanitize_dimension',
     ) );
     $wp_customize->add_control( 'ebttb_height', array(
-        'label'       => __( 'Height', 'ebttb' ),
+        'label'       => __( 'Height', 'easy-back-to-top-button' ),
         'section'     => 'ebttb_top_section',
         'type'        => 'text',
     ) );
@@ -121,7 +121,7 @@ function ebttb_customizer_settings( $wp_customize ) {
         'sanitize_callback' => 'ebttb_sanitize_dimension',
     ) );
     $wp_customize->add_control( 'ebttb_icon_size', array(
-        'label'       => __( 'Icon Size', 'ebttb' ),
+        'label'       => __( 'Icon Size', 'easy-back-to-top-button' ),
         'section'     => 'ebttb_top_section',
         'type'        => 'text',
     ) );
@@ -133,7 +133,7 @@ function ebttb_customizer_settings( $wp_customize ) {
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ebttb_icon_color', array(
-        'label'   => __( 'Icon Color', 'ebttb' ),
+        'label'   => __( 'Icon Color', 'easy-back-to-top-button' ),
         'section' => 'ebttb_top_section',
     ) ) );
 }
