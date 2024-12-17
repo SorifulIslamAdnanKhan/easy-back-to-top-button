@@ -1,6 +1,6 @@
 === Easy Back To Top Button ===
 Contributors: sorinxofficial, adnankhan7792  
-Tags: back to top, scroll to top, easy scroll, back to top button, smooth scroll  
+Tags: back to top, scroll to top, back to top button, scroll to top button, easy scroll, smooth scroll  
 Requires at least: 5.2  
 Tested up to: 6.5  
 Requires PHP: 7.2  
@@ -47,9 +47,6 @@ No. The plugin is lightweight, optimized for performance, and uses clean code pr
 
 = Does it work on mobile devices? =
 Yes, the button is fully responsive and works seamlessly on all screen sizes.
-
-= Can I disable the button on specific pages? =
-Currently, the plugin doesn’t provide a per-page control, but this feature may be added in a future update.
 
 == Screenshots ==
 1. **Default Button** - The "Back to Top" button with default settings.
