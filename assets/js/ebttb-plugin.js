@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Register the ScrollToPlugin
   gsap.registerPlugin(ScrollToPlugin);
 
-  // Show button on scroll
+  // Show Button on Scroll
   window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {
       backToTopButton.classList.add("visible");
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Scroll back to top with GSAP animation
+  // Scroll Back to Top with GSAP Animation
   backToTopButton.addEventListener("click", () => {
     gsap.to(window, {
       duration: 1,
