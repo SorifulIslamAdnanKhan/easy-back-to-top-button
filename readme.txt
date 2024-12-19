@@ -1,12 +1,14 @@
 === Easy Back To Top Button ===
 Contributors: sorinxofficial, adnankhan7792  
-Tags: back to top, scroll to top, back to top button, scroll to top button, easy scroll, smooth scroll  
+Tags: back to top, scroll to top, back to top button, scroll to top button, smooth scroll 
 Requires at least: 5.2  
 Tested up to: 6.7  
 Requires PHP: 7.2  
 Stable tag: 1.0.0  
 License: GPL v2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html  
+
+**Add a customizable, lightweight "Back to Top" button to enhance your website's usability and accessibility.**
 
 == Description ==
 **Easy Back To Top Button** is a lightweight, user-friendly plugin that allows you to add a customizable "Back to Top" button to your WordPress website. 
