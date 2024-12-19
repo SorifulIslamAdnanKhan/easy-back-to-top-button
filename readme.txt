@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPL v2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html  
 
-**Add a customizable, lightweight "Back to Top" button to enhance your website's usability and accessibility.**
+Add a customizable, lightweight "Back to Top" button to enhance your website's usability and accessibility.
 
 == Description ==
 **Easy Back To Top Button** is a lightweight, user-friendly plugin that allows you to add a customizable "Back to Top" button to your WordPress website. 
