@@ -20,7 +20,7 @@ No coding skills are required! Customize button appearance, including color, siz
 - Customize button background color, icon color, width, height, and border radius.
 - Responsive design – works perfectly on all devices.
 - Lightweight and optimized for performance.
-- Smooth scroll animation powered by GSAP.
+- Smooth scroll animation powered by modern JavaScript.
 - FontAwesome-based "back-to-top" icon.
 
 **Why choose Easy Back To Top Button?**
@@ -59,7 +59,6 @@ Yes, the button is fully responsive and works seamlessly on all screen sizes.
 = 1.0.0 =
 - Initial release of the plugin.
 - Customizer options added for button customization.
-- Smooth scroll animation with GSAP.
 
 == Upgrade Notice ==
 = 1.0.0 =
