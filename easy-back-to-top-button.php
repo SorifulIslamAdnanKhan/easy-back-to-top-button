@@ -25,8 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 function ebttb_enqueue_styles(){
-  wp_enqueue_style('ebttb-fontawesome-style', plugins_url('assets/fontawesome/css/all.min.css', __FILE__), array(), '6.7.1');
-  wp_enqueue_style('ebttb-style', plugins_url('assets/css/ebttb-style.css', __FILE__), array(), '1.0.0');
+    wp_enqueue_style('ebttb-fontawesome-style', plugins_url('assets/fontawesome/css/all.min.css', __FILE__), array(), '6.7.1');
+    wp_enqueue_style('ebttb-style', plugins_url('assets/css/ebttb-style.css', __FILE__), array(), '1.0.0');
 }
 
 add_action("wp_enqueue_scripts", "ebttb_enqueue_styles" );
@@ -36,9 +36,9 @@ add_action("wp_enqueue_scripts", "ebttb_enqueue_styles" );
  */
 
 function ebttb_enqueue_scripts() {
-  wp_enqueue_script('gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js', array(), null, true);
-  wp_enqueue_script('gsap-scroll-to-plugin', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js', array('gsap-js'), null, true);
-  wp_enqueue_script( 'ebttb-plugin-script', plugins_url( 'assets/js/ebttb-plugin.js', __FILE__ ), array('gsap-js', 'gsap-scroll-to-plugin'), '1.0.0', true );
+    wp_enqueue_script('gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js', array(), null, true);
+    wp_enqueue_script('gsap-scroll-to-plugin', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js', array('gsap-js'), null, true);
+    wp_enqueue_script( 'ebttb-plugin-script', plugins_url( 'assets/js/ebttb-plugin.js', __FILE__ ), array('gsap-js', 'gsap-scroll-to-plugin'), '1.0.0', true );
 }
 
 add_action("wp_enqueue_scripts", "ebttb_enqueue_scripts");
